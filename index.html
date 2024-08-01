@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio Website</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <img src="Images/Anaya Potter.png"class="logo">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hi there, I am <span>Anaya Potter</span>.</h1>
+                    <p>Web Designer</p>
+                </div>
+            
+            </div>
+
+        <!-------About section ------->
+
+        <div id="about">
+            <div class="container">
+                    <div class="about-text">
+                        <h1 class="subtitle">About me</h1>
+                        <p><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                        in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                        in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                    </div>
+                    <div class="tab-titles">
+                        <p class="tabs active-link" onclick="opentab('skills')"> Skills</p> <!---onclick to make tabs fucntional and show correct text-->
+                        <p class="tabs" onClick="opentab('experience')"> Experience</p>
+                        <p class="tabs" onClick="opentab('education')"> Education</p>
+                    </div>
+                    <!---Skills-->
+                    <div class="tab-contents active-tab" id="skills"><!---Add opentab function to each tab content-->
+                        <ul>
+                            <li><span>Web development</span><br></li>
+                            <li><span>iOS App development</span><br></li>
+                            <li><span>UI/UX</span><br></li>
+
+                        </ul>
+                    </div>
+                    <!---Experience-->
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Web development</span><br></li>
+                            <li><span>iOS App development</span><br></li>
+                            <li><span>UI/UX</span><br></li>
+
+                        </ul>
+                    </div>
+                    <!---Education-->
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>Iona  University</span><br></li>
+                            <li><span>iOS App development</span><br></li>
+                            <li><span>UI/UX</span><br></li>
+
+                        </ul>
+                    </div>
+            </div>
+        <!------------services-------->
+        <div id="services">
+            <div class="container">
+                <h1 class="subtitle">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <h2>Web Design</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>UI/UX</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#">learn more</a>
+                    </div>
+                    <div>
+                        <h2>Tutoring</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            <a href="#">learn more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------portfolio----------->
+
+            <div id="portfolio">
+                <div class="container">
+                    <h1 class="subtitle">My Work</h1>
+                    <div class="work-list">
+                        <div class="work">
+                            <img src="Images/Mock-Up-1.jpg">
+
+                        </div>
+                        <div class="work">
+                            <img src="Images/Mock-Up-2.jpg">
+
+                        </div>
+                        <div class="work">
+                            <img src="Images/Mock-Up-3.jpg">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+    
+    <script>
+        var tabs =  document.getElementsByClassName("tabs");/*create variable to store tabs(links) and tab contents(content for each tab) class*/
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){  /*define opentab function and create for loops to remove the line and text for each tab and its content on click*/
+            for(tab of tabs){
+                tab.classList.remove("active-link");/* removes the line under the current active link*/
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");/* removes the text under the current active tab*/
+            }
+
+            event.currentTarget.classList.add("active-link"); /* Will display the active line onclick*/
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    </body>
+</html>
